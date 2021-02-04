@@ -1,0 +1,29 @@
+
+<br><br>
+<div class="container">
+<p id="notice"><%= notice %></p>
+<%= l @patient_feedback.created_at, format: :long %>
+<p>
+  <strong><%= t ".patient_name" %></strong>
+  <%= @patient_feedback.patient_name %>
+</p>
+
+<p>
+  <strong><%= t ".patient_email" %></strong>
+  <%= @patient_feedback.patient_email %>
+</p>
+
+<p>
+  <strong><%= t ".doctor_name" %></strong>
+  <%= @patient_feedback.doctor_name %>
+</p>
+
+<p>
+  <strong><%= t ".feedback" %></strong>
+  <%= @patient_feedback.feedback %>
+</p>
+
+
+<%= link_to t('.edit'), edit_patient_feedback_path(@patient_feedback) %> |
+<%= link_to t('.back'), patient_feedbacks_path %>
+</div>

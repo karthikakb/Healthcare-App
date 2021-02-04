@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthCare</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :javascript_includes %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/blogs"><%= t '.title' %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+             <%= link_to t(".feedback"), new_patient_feedback_path,class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <a href="/?locale=en" class="nav-link" >English</a>
+
+            </li>
+             <li class="nav-item">
+              <a href="/?locale=ja" class="nav-link" >日本人</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<%= form_for patient_feedback, :url => (patient_feedback.id.present? ?patients_feedback_path(patient_feedback) : patients_feedback_index_path) do |f| %>
+  <% if patient_feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t 'global.forms.messages.errors', count:feedback.errors.count %></h2>
+      <ul>
+      <% patient_feedback.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% all_locales.each do |locale| %>
+  <div class="field">
+    <% patient_name = "patient_name_#{Mobility.normalize_locale(locale)}" %>
+    <%= f.label patient_name %>
+    <%= f.text_field patient_name %>
+  </div>
+
+  <div class="field">
+    <% patient_email = "patient_email_#{Mobility.normalize_locale(locale)}" %>
+    <%= f.label patient_email %>
+    <%= f.text_field patient_email %>
+  </div>
+
+  <div class="field">
+    <% doctor_name = "doctor_name_#{Mobility.normalize_locale(locale)}" %>
+    <%= f.label doctor_name %>
+    <%= f.text_field doctor_name %>
+  </div>
+
+  <div class="field">
+    <% feedback = "feedback_#{Mobility.normalize_locale(locale)}" %>
+    <%= f.label feedback %>
+    <%= f.text_area feedback %>
+  </div>
+  <hr>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit t 'global.forms.submit' %>
+  </div>
+<% end %>

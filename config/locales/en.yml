@@ -1,10 +1,10 @@
 en:
   layouts:
     application:
-      title: "Medall Labs "  
+      title: "SS Lab"  
   static_page:
     index:
-      welcome: "welcome"
+      welcome: "Welcome"
       service: "We provide following test in Our Lab"
       cbc: "Complete Blood Count"
       bmp: "Basic Metabolic Panel"
@@ -19,13 +19,13 @@ en:
           one: "one error prohibited this feedback from being saved "
           other: " %{count} error prohibited this feedback from being saved "
       submit: "submit"
-  patient_feedbacks:
+  patients_feedback:
     new:
       back: "back"      
       title: "New patient feedback"  
     index:
       new_patient_feedback: "New Patient Feedback"
-      patient_feedback: "Patient feedbacks"  
+      patient_feedback: "Patients Feedback"  
       patient_name: "Name"
       patient_email: "Email"
       doctor_name: "Doctor Name"

@@ -66,7 +66,7 @@ ja:
       year: 年
   layouts:
     application:
-      title: "メドール ラボとス"
+      title: "ssラボ"
       feedback: "フィードバック"
   static_page:
     index:
@@ -86,7 +86,7 @@ ja:
           two: "2つのエラーにより、このフィードバックを保存できませんでした"
           three: "3つのエラーにより、このフィードバックを保存できませんでした"
       submit: "参加する"
-  patient_feedbacks:
+  patients_feedback:
     new:
       back: "バック"      
       title: "新しい患者のフィードバック"
